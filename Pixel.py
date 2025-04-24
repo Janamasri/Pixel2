@@ -2,7 +2,11 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
-from neuralprophet import NeuralProphet as Prophet
+from prophet import Prophet
+import prophet
+prophet.serialize.STAN_BACKEND = "CMDSTANPY"
+
+model = Prophet(...)
 from xgboost import XGBRegressor
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
