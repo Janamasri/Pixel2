@@ -9,7 +9,7 @@ from xgboost import XGBRegressor
 # Prophet setup with cmdstanpy (no need for pystan)
 from prophet import Prophet
 import cmdstanpy
-cmdstanpy.install_cmdstan()
+cmdstanpy.install_cmdstan("Pixel.py")
 
 # ================================
 # Pixel Digital - Growth Dashboard (Extended Version)
@@ -57,7 +57,7 @@ page = st.sidebar.radio(
 
 # === HOME PAGE ===
 if page == "Home":
-    st.image("https://raw.githubusercontent.com/Janamasri/Pixel2/main/Pixel.jpg", width=300)
+    st.image("Pixel.jpg", width=300)
     st.markdown('<div class="big-title">Pixel Digital</div>', unsafe_allow_html=True)
     st.markdown('<hr class="blue-line"/>', unsafe_allow_html=True)
 
