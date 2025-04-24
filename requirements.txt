@@ -1,9 +1,7 @@
-python_version == 3.10
 streamlit
 pandas
 numpy==1.24
 matplotlib
 scikit-learn
 xgboost
-prophet==1.0
-pystan==2.19.1.1
+prophet==1.1.5  # Uses pystan (not cmdstanpy)
