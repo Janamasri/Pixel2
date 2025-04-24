@@ -8,10 +8,12 @@ from xgboost import XGBRegressor
 
 from prophet import Prophet
 import cmdstanpy
+import os
 
-# Ensure CmdStan is installed (do this once in Streamlit)
-if not cmdstanpy.cmdstan_path():
+# Install CmdStan only if not present
+if not os.path.exists(cmdstanpy.cmdstan_path()):
     cmdstanpy.install_cmdstan()
+
 
 
 # ================================
