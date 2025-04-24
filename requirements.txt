@@ -1,9 +1,10 @@
 python_version == 3.10
 streamlit
 pandas
-numpy==1.24
+numpy==1.24.4
 matplotlib
 scikit-learn
 xgboost
 prophet==1.1.5
 cmdstanpy==1.1.0
+Cython
