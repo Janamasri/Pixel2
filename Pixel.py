@@ -5,16 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 from xgboost import XGBRegressor
-import os
-
-# Prophet setup
-from prophet import Prophet
-import cmdstanpy
-
-# Ensure CmdStan is installed
-if not os.path.exists(cmdstanpy.cmdstan_path()):
-    st.warning("Installing CmdStan (this may take a few minutes)...")
-    cmdstanpy.install_cmdstan()
+from prophet import Prophet  # using pystan backend (no CmdStan!)
 
 # ================================
 # Pixel Digital - Growth Dashboard (Extended Version)
@@ -118,7 +109,6 @@ elif page == "KPI Dashboard":
         "https://public.tableau.com/views/SalesbySalesperson_17451766336230/Dashboard4?:embed=y&:display_count=yes&:showVizHome=no",
         height=827, width=1600
     )
-
 
 # === FORECASTING SIMULATOR ===
 elif page == "Forecasting Simulator":
