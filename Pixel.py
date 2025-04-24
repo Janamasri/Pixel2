@@ -2,14 +2,14 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
-from prophet import Prophet
-import prophet
-prophet.serialize.STAN_BACKEND = "CMDSTANPY"
-
-model = Prophet(...)
-from xgboost import XGBRegressor
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
+from xgboost import XGBRegressor
+
+# Prophet setup with cmdstanpy (no need for pystan)
+from prophet import Prophet
+import cmdstanpy
+cmdstanpy.install_cmdstan()
 
 # ================================
 # Pixel Digital - Growth Dashboard (Extended Version)
