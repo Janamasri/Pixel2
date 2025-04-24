@@ -6,14 +6,12 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 from xgboost import XGBRegressor
 
-import os
+from prophet import Prophet
 import cmdstanpy
 
-# Ensure CMDSTAN backend is installed and used before Prophet is imported
+# Ensure CmdStan is installed (do this once in Streamlit)
 if not cmdstanpy.cmdstan_path():
     cmdstanpy.install_cmdstan()
-
-from prophet import Prophet
 
 
 # ================================
