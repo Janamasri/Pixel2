@@ -7,8 +7,8 @@ from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 from xgboost import XGBRegressor
 
 import os
-from prophet import Prophet
 import cmdstanpy
+from prophet import Prophet
 
 # Ensure CMDSTAN backend is installed and set
 if not cmdstanpy.cmdstan_path():
