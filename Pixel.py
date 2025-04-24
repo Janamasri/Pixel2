@@ -8,8 +8,6 @@ from xgboost import XGBRegressor
 
 # Prophet setup with cmdstanpy (no need for pystan)
 from prophet import Prophet
-import cmdstanpy
-cmdstanpy.install_cmdstan()
 
 # ================================
 # Pixel Digital - Growth Dashboard (Extended Version)
