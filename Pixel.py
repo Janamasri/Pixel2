@@ -8,11 +8,12 @@ from xgboost import XGBRegressor
 
 import os
 import cmdstanpy
-from prophet import Prophet
 
-# Ensure CMDSTAN backend is installed and set
+# Ensure CMDSTAN backend is installed and used before Prophet is imported
 if not cmdstanpy.cmdstan_path():
     cmdstanpy.install_cmdstan()
+
+from prophet import Prophet
 
 
 # ================================
