@@ -10,11 +10,14 @@ from prophet import Prophet
 import cmdstanpy
 import os
 
-# Install CmdStan only if not present
-if not os.path.exists(cmdstanpy.cmdstan_path()):
-    cmdstanpy.install_cmdstan()
+# Safely install CmdStan if it's not available
+import cmdstanpy
+from cmdstanpy import cmdstan_path, install_cmdstan
 
-
+try:
+    _ = cmdstan_path()
+except ValueError:
+    install_cmdstan()
 
 # ================================
 # Pixel Digital - Growth Dashboard (Extended Version)
