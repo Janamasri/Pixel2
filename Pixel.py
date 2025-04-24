@@ -6,8 +6,14 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 from xgboost import XGBRegressor
 
-# Prophet setup with cmdstanpy (no need for pystan)
+import os
 from prophet import Prophet
+import cmdstanpy
+
+# Ensure CMDSTAN backend is installed and set
+if not cmdstanpy.cmdstan_path():
+    cmdstanpy.install_cmdstan()
+
 
 # ================================
 # Pixel Digital - Growth Dashboard (Extended Version)
